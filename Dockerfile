@@ -1,12 +1,10 @@
 FROM openjdk:17-jdk
 
-RUN apt-get update && apt-get install -y findutils
-
 WORKDIR /app
 
 COPY . /app
 
-RUN chmod +x gradlew
+RUN chmod +x ./gradlew
 
 RUN ./gradlew build
 
