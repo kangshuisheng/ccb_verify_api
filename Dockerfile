@@ -10,5 +10,4 @@ COPY build/libs/*.jar app.jar
 # 暴露应用程序的端口（如果需要）
 EXPOSE 3399
 
-# 定义启动命令
 CMD ["java", "-jar", "app.jar"]
