@@ -6,7 +6,7 @@ COPY . /app
 
 RUN chmod +x ./gradlew
 
-RUN ./gradlew build
+RUN ./gradlew build --no-daemon
 
 EXPOSE 3399
 
