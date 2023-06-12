@@ -1,4 +1,4 @@
-FROM adoptopenjdk:17-jdk-hotspot-alpine
+FROM openjdk:11-jdk-alpine
 
 COPY ./build/libs/ccb_verify.jar /app/app.jar
 
