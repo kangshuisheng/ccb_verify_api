@@ -1,4 +1,4 @@
-FROM openjdk:11-jdk-alpine
+FROM openjdk:11-jdk
 
 COPY ./build/libs/ccb_verify.jar /app/app.jar
 
