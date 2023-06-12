@@ -4,9 +4,9 @@ WORKDIR /app
 
 COPY . /app
 
-RUN chmod +x ./gradlew
+RUN chmod +x gradlew
 
-RUN ./gradlew build --no-daemon
+RUN ./gradlew build
 
 EXPOSE 3399
 

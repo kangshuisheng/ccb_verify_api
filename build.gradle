@@ -14,7 +14,7 @@ repositories {
 
 dependencies {
 	implementation files('src/main/lib/netpay.jar')
-	
+
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter'
 	compileOnly 'org.projectlombok:lombok:1.18.20'
@@ -28,4 +28,7 @@ tasks.named('test') {
 
 jar {
 	archiveName = "ccb_verify.jar"
+	manifest {
+    attributes 'Main-Class': 'com.kongshum.verify.CcbVerifyPayloadApplication'
+  }
 }
