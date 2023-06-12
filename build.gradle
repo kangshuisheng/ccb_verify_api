@@ -13,11 +13,12 @@ repositories {
 }
 
 dependencies {
+	implementation files('src/main/lib/netpay.jar')
+	
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter'
 	compileOnly 'org.projectlombok:lombok:1.18.20'
   annotationProcessor 'org.projectlombok:lombok:1.18.20'
-	implementation files('src/main/lib/netpay.jar')
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
