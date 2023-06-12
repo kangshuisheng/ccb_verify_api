@@ -1,9 +1,11 @@
 FROM openjdk:11-jdk
 
-COPY ./build/libs/ccb_verify.jar /app/app.jar
-
 WORKDIR /app
+
+COPY . /app
+
+RUN ./gradlew build
 
 EXPOSE 3399
 
-CMD ["java", "-jar", "app.jar"]
+CMD ["java", "-jar", "build/libs/ccb_verify.jar"]
