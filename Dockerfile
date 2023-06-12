@@ -1,8 +1,8 @@
-FROM openjdk:17-jdk
+FROM adoptopenjdk:17-jdk-hotspot-alpine
+
+COPY ./build/libs/ccb_verify.jar /app/app.jar
 
 WORKDIR /app
-
-COPY build/libs/ccb_verify.jar ./app.jar
 
 EXPOSE 3399
 
