@@ -16,14 +16,20 @@ public class AppController {
 	@ResponseBody
 	public boolean verify(
 			@RequestBody CCBPayloadDto payload) {
+
 		System.out.println(payload.sign);
 		System.out.println(payload.src);
 		System.err.println(payload.publicKey);
+
 		CCBSign.RSASig rsa = new RSASig();
 		rsa.setPublicKey(payload.publicKey);
+
 		String sign = rsa.generateSigature(payload.src);
+
 		boolean res = rsa.verifySigature(sign, payload.src);
+
 		System.out.print(res);
+		
 		return res;
 	}
 }
