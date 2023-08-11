@@ -23,11 +23,8 @@ public class AppController {
 
 		CCBSign.RSASig rsa = new RSASig();
 		rsa.setPublicKey(payload.publicKey);
-		
-		boolean res = rsa.verifySigature(payload.sign, payload.src);
 
-		System.out.print(res);
-		
+		boolean res = rsa.verifySigature(payload.sign, payload.src);
 		return res;
 	}
 }
